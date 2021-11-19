@@ -119,3 +119,13 @@ export START="/mnt/d/"
 if [[ $PWD == $HOME ]]; then
     cd $START
 fi
+export PATH="$HOME/.local/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# alias python="python3.10"
+alias jn="jupyter notebook"
+alias dc="source /mnt/d/solutions/ENVIRONMENTS/discord_env/bin/activate"
+alias gnm="source /mnt/d/solutions/ENVIRONMENTS/genome_env/bin/activate"
+alias da="deactivate"
+alias uz="source ~/.zshrc"
+
+export BROWSER="wslview"
