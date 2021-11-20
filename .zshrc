@@ -129,3 +129,6 @@ alias da="deactivate"
 alias uz="source ~/.zshrc"
 
 export BROWSER="wslview"
+export PATH=$PATH:/usr/local/go/bin
+
+/usr/local/go/bin/go run ~/.scripts/wsl2-windows.go
