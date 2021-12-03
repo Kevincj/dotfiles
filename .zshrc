@@ -127,6 +127,11 @@ alias dc="source /mnt/d/solutions/ENVIRONMENTS/discord_env/bin/activate"
 alias gnm="source /mnt/d/solutions/ENVIRONMENTS/genome_env/bin/activate"
 alias da="deactivate"
 alias uz="source ~/.zshrc"
+alias dbot="cd /mnt/d/solutions/DiscordMule/ && dc && python bot.py"
+alias lbot="cd /mnt/d/solutions/listbot/ && dc && python bot.py"
+alias rbot="python bot.py"
+
+
 
 export BROWSER="wslview"
 export PATH=$PATH:/usr/local/go/bin
