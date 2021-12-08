@@ -120,8 +120,18 @@ export PATH="$HOME/.local/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_mod
 
 alias python="python3.10"
 alias jn="jupyter notebook"
-alias dc="source /mnt/d/solutions/ENVIRONMENTS/discord_env/bin/activate"
-alias gnm="source /mnt/d/solutions/ENVIRONMENTS/genome_env/bin/activate"
+
+if grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null ; then
+  export START="/mnt/d/"
+  if [[ $PWD == $HOME ]]; then
+      cd $START
+  fi
+  alias dc="source /mnt/d/solutions/ENVIRONMENTS/discord_env/bin/activate"
+  alias gnm="source /mnt/d/solutions/ENVIRONMENTS/genome_env/bin/activate"
+else
+  alias dc="source ~/ENVIRONMENTS/discord_env/bin/activate"
+  alias gnm="source ~/ENVIRONMENTS/genome_env/bin/activate"
+fi
 alias da="deactivate"
 alias uz="source ~/.zshrc"
 alias rbot="python bot.py"
