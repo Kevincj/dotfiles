@@ -128,17 +128,27 @@ if grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null ; then
   fi
   alias dc="source /mnt/d/solutions/ENVIRONMENTS/discord_env/bin/activate"
   alias gnm="source /mnt/d/solutions/ENVIRONMENTS/genome_env/bin/activate"
+  alias dbot="cd /mnt/d/solutions/DiscordMule/ && dc && ./hupbot"
+  alias lbot="cd /mnt/d/solutions/ListMule/ && dc && ./hupbot"
+  export BROWSER="wslview"
+  export PATH=$PATH:/usr/local/go/bin
+
+  /usr/local/go/bin/go run ~/.scripts/wsl2-windows.go
 else
   alias dc="source ~/ENVIRONMENTS/discord_env/bin/activate"
   alias gnm="source ~/ENVIRONMENTS/genome_env/bin/activate"
+  alias dbot="cd ~/DiscordMule/ && dc && ./hupbot"
+  alias lbot="cd ~/ListMule/ && dc && ./hupbot"
 fi
+
 alias da="deactivate"
 alias uz="source ~/.zshrc"
 alias rbot="python bot.py"
 
 
 
-export BROWSER="wslview"
-export PATH=$PATH:/usr/local/go/bin
 
-/usr/local/go/bin/go run ~/.scripts/wsl2-windows.go
+
+alias dbot="cd ~/DiscordMule/ && dc && python bot.py"
+alias lbot="cd ~/ListMule/ && dc && python bot.py"
+alias rbot="python bot.py"
