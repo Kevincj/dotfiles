@@ -120,6 +120,9 @@ export PATH="$HOME/.local/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_mod
 
 alias python="python3.10"
 alias jn="jupyter notebook"
+alias da="deactivate"
+alias uz="source ~/.zshrc"
+alias rbot="python bot.py"
 
 if grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null ; then
   export START="/mnt/d/"
@@ -141,14 +144,3 @@ else
   alias lbot="cd ~/ListMule/ && dc && ./hupbot"
 fi
 
-alias da="deactivate"
-alias uz="source ~/.zshrc"
-alias rbot="python bot.py"
-
-
-
-
-
-alias dbot="cd ~/DiscordMule/ && dc && python bot.py"
-alias lbot="cd ~/ListMule/ && dc && python bot.py"
-alias rbot="python bot.py"
