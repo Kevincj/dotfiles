@@ -78,13 +78,13 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git  zsh-autosuggestions autojump zsh-syntax-highlighting)
+plugins=(docker git  zsh-autosuggestions autojump zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export MANPATH="/usr/local/man:$MANPATH"
+# export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
@@ -131,6 +131,7 @@ if grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null ; then
   fi
   alias dc="source /mnt/d/solutions/ENVIRONMENTS/discord_env/bin/activate"
   alias gnm="source /mnt/d/solutions/ENVIRONMENTS/genome_env/bin/activate"
+  alias loc="source /mnt/d/solutions/ENVIRONMENTS/location_env/bin/activate"
   alias dbot="cd /mnt/d/solutions/DiscordMule/ && dc && ./hupbot"
   alias lbot="cd /mnt/d/solutions/ListMule/ && dc && ./hupbot"
   export BROWSER="wslview"
@@ -140,6 +141,7 @@ if grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null ; then
 else
   alias dc="source ~/ENVIRONMENTS/discord_env/bin/activate"
   alias gnm="source ~/ENVIRONMENTS/genome_env/bin/activate"
+  alias loc="source ~/ENVIRONMENTS/location_env/bin/activate"
   alias dbot="cd ~/DiscordMule/ && dc && ./hupbot"
   alias lbot="cd ~/ListMule/ && dc && ./hupbot"
 fi
