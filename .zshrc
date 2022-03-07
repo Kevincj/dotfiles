@@ -132,6 +132,7 @@ if grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null ; then
   alias dc="source /mnt/d/solutions/ENVIRONMENTS/discord_env/bin/activate"
   alias gnm="source /mnt/d/solutions/ENVIRONMENTS/genome_env/bin/activate"
   alias loc="source /mnt/d/solutions/ENVIRONMENTS/location_env/bin/activate"
+  alias lgt="source /mnt/d/solutions/ENVIRONMENTS/lighting_env/bin/activate"
   alias dbot="cd /mnt/d/solutions/DiscordMule/ && dc && ./hupbot"
   alias lbot="cd /mnt/d/solutions/ListMule/ && dc && ./hupbot"
   export BROWSER="wslview"
@@ -142,6 +143,7 @@ else
   alias dc="source ~/ENVIRONMENTS/discord_env/bin/activate"
   alias gnm="source ~/ENVIRONMENTS/genome_env/bin/activate"
   alias loc="source ~/ENVIRONMENTS/location_env/bin/activate"
+  alias lgt="source ~/ENVIRONMENTS/lighting_env/bin/activate"
   alias dbot="cd ~/DiscordMule/ && dc && ./hupbot"
   alias lbot="cd ~/ListMule/ && dc && ./hupbot"
 fi
